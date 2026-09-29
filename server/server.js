@@ -1,4 +1,5 @@
 import 'dotenv/config'; import express from 'express'; import cors from 'cors'; import Database from 'better-sqlite3'; import crypto from 'crypto';
+import path from 'path'; import {fileURLToPath} from 'url';
 import {GRAPH,PREREQ,REVISE,Q,STYLES,NOTES,COURSES,SEED,MASTER_MODULES} from './ai/kb.js'; import {interviewQ,interviewFeedback,diagnose,coach} from './ai/engine.js';
 import {LESSONS} from './lessons_i18n.js';
 import {COMPANY_SETS} from './ai/aptitude.js';
@@ -168,4 +169,8 @@ app.post('/api/aptitude/submit',auth,(req,res)=>{
  (s.mocks=s.mocks||[]).push({company:a.company,score,total,percent,t:Date.now()});delete s.mockActive;save(req.u,s);
  res.json({name:c.name,right,wrong,skipped,score,total,percent,review})});
 
-app.listen(process.env.PORT||3001,()=>console.log('API on :3001'));
+const __dirname=path.dirname(fileURLToPath(import.meta.url));
+const dist=path.join(__dirname,'../client/dist');
+app.use(express.static(dist));
+app.get('*',(req,res,next)=>req.path.startsWith('/api')?next():res.sendFile(path.join(dist,'index.html')));
+app.listen(process.env.PORT||3001,()=>console.log('API on :'+(process.env.PORT||3001)));

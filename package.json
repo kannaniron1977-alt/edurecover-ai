@@ -1,1 +1,13 @@
-{"name":"edurecover-ai","private":true,"scripts":{"postinstall":"npm i --prefix server && npm i --prefix client","dev":"concurrently \"npm:dev --prefix server\" \"npm:dev --prefix client\""},"devDependencies":{"concurrently":"^8.2.2"}}
+{
+  "name": "edurecover-ai",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm i --prefix server && npm i --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "node server/server.js",
+    "dev": "concurrently \"npm:dev --prefix server\" \"npm:dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
