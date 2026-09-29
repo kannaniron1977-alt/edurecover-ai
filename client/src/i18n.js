@@ -1,0 +1,3 @@
+const D={en:{dash:'Dashboard',courses:'My Courses',map:'Concept Map',ana:'Analytics',teach:'Teacher / Admin',out:'Logout',hi:'Welcome',ov:'Overall Learning',coins:'Coins',les:'Lessons Completed',att:'Quiz Attempts',tasks:"Today's Tasks",lb:'Friendly Leaderboard',act:'Recent Activity',crs:'Courses',start:'Start'},
+ta:{dash:'டாஷ்போர்டு',courses:'என் பாடங்கள்',map:'கருத்து வரைபடம்',ana:'பகுப்பாய்வு',teach:'ஆசிரியர் / நிர்வாகி',out:'வெளியேறு',hi:'வணக்கம்',ov:'மொத்த கற்றல்',coins:'நாணயங்கள்',les:'முடித்த பாடங்கள்',att:'வினாடி வினா முயற்சிகள்',tasks:'இன்றைய பணிகள்',lb:'நட்பு தரவரிசை',act:'சமீபத்திய செயல்பாடு',crs:'பாடங்கள்',start:'தொடங்கு'}};
+export const t=k=>(D[localStorage.lang]||D.en)[k]||D.en[k];

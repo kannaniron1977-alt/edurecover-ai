@@ -1,0 +1,1 @@
+{"name":"edurecover-ai","private":true,"scripts":{"postinstall":"npm i --prefix server && npm i --prefix client","dev":"concurrently \"npm:dev --prefix server\" \"npm:dev --prefix client\""},"devDependencies":{"concurrently":"^8.2.2"}}

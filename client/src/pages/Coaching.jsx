@@ -1,0 +1,5 @@
+import {Link} from 'react-router-dom';
+export default function Coaching({me}){const s=me.state,g=me.graph.filter(n=>n.status==='weak'||n.status==='repeated'),cnt={};s.history.forEach(h=>{if(h.diag.label!=='none')cnt[h.diag.label]=(cnt[h.diag.label]||0)+1});
+ return <div><div className="card"><h3> AI Coach - your focus areas</h3>{g.length?g.map(n=><div className="row" key={n.id}><div><b>{n.name}</b><br/><small>{n.status} · {n.mis} misconception(s) · mastery {n.mastery}%</small></div><Link className="btn" to={'/learn?course='+n.course}>Practice →</Link></div>):<small>No weak areas now. Keep practising!</small>}</div>
+ <div className="card"><h3>Misconception patterns</h3>{Object.entries(cnt).map(([k,v])=><p key={k}><span className="tag">{k}</span> × {v}</p>)}{!Object.keys(cnt).length&&<small>Take a quiz first.</small>}</div>
+ <div className="card"><h3>Intervention history</h3>{s.used.slice(-6).reverse().map((u,i)=><p key={i}>{u.concept}: {u.style} (level {u.level})</p>)}{!s.used.length&&<small>None yet.</small>}</div></div>}
