@@ -1,14 +1,12 @@
 # LearnForge - EduRecover AI
 
-**Team Name:** LearnForge
-**Team Leader:** Keerthana
-**Members:** Keerthana, Dharshana, Gifta Alice, Preethi
-**College:** Dhaanish Ahmed College of Engineering, Chennai
-**Contact:** kannaniron1977@gmail.com / 7845189245
-
-**GitHub Repo (Public):** https://github.com/kannaniron1977-alt/edurecover-ai
-**Live Demo:** https://edurecover-ai.onrender.com
-
+- **Team Name:** LearnForge
+- **Team Leader:** Keerthana
+- **Members:** Keerthana, Dharshana, Gifta Alice, Preethi
+- **College:** Dhaanish Chennai College of Engineering, Chennai
+- **Contact:** kannaniron1977@gmail.com / 7845189245
+- **GitHub Repo (Public):** https://github.com/kannaniron1977-alt/edurecover-ai
+- **Live Demo:** https://edurecover-ai.onrender.com
 ## Problem
 Students and employees repeat the same mistakes. A correct answer with wrong reasoning is not real mastery.
 
