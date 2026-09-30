@@ -7,6 +7,7 @@
 - **Contact:** kannaniron1977@gmail.com / 7845189245
 - **GitHub Repo (Public):** https://github.com/kannaniron1977-alt/edurecover-ai
 - **Live Demo:** https://edurecover-ai.onrender.com
+
 ## Problem
 Students and employees repeat the same mistakes. A correct answer with wrong reasoning is not real mastery.
 
